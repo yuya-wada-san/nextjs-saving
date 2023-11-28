@@ -1,6 +1,9 @@
 import { google } from 'googleapis';
+import { unstable_noStore as noStore } from 'next/cache';
 
 export async function getGoogleSheetsData(range: string) {
+  noStore();
+  
   const auth = await google.auth.getClient({
     projectId: "prefab-fabric-406501",
     credentials: {
