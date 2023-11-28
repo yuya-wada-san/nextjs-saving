@@ -1,4 +1,5 @@
 import { getGoogleSheetsData } from "@/app/lib/gsheets"
+import Link from "next/link";
 
 export default async function Page() {
 
@@ -19,6 +20,16 @@ export default async function Page() {
               <p className="text-right">{data}</p>
             </div>
           )}          
+        </div>
+        <div className="p-4 mt-4 text-center">
+          <a 
+            href="https://docs.google.com/spreadsheets/d/1EXP7L9ZZJ5pDEAlYTrkDTgfcnVqdJieqPxCFKpWrJkY/edit#gid=0"
+            className="group rounded-lg border hover:border-transparent px-5 py-4 transition-colors border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Go to Sheet
+          </a>
         </div>
       </div>
     </main>
