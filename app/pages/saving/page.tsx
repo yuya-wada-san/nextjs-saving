@@ -4,11 +4,11 @@ import Link from "next/link";
 export default async function Page() {
 
   const titles: string[] = ['Yuya','Haruna','Total Share','Only Y','Only H'];
-  const googleSheetData = await getGoogleSheetsData('Summary_Nov23!B3:B7');
+  const googleSheetData = await getGoogleSheetsData('Summary_Nov23!B2:B6');
 
   return (
     <main className="flex min-h-screen p-8 md:p-24">
-      <div className="z-10 max-w-5xl w-full font-mono text-sm">
+      <div className="max-w-5xl w-full font-mono">
         <h1 className="text-4xl w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Saving Data
         </h1>
@@ -30,6 +30,14 @@ export default async function Page() {
           >
             Go to Sheet
           </a>
+        </div>
+        <div className="p-4 mt-4 text-center">
+          <Link 
+            href="/pages/form"
+            className="group rounded-lg border hover:border-transparent px-5 py-4 transition-colors border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          >
+            Go to Form
+          </Link>
         </div>
       </div>
     </main>
