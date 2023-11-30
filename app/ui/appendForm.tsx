@@ -12,7 +12,7 @@ export default function AppendForm() {
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
         <div className="mb-4">
-          <label htmlFor="customer" className="mb-2 block text-sm font-medium">
+          <label htmlFor="person" className="mb-2 block text-sm font-medium">
             Choose person
           </label>
           <div className="relative">
