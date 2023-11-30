@@ -9,7 +9,7 @@ export default function AppendForm() {
 
   return (    
     <form action={dispatch}>
-      <div className="rounded-md bg-gray-50 p-4 md:p-6 my-8">
+      <div className="rounded-md md:p-6 my-8">
 
         {/* Sheet Name */}
         <div className="mb-4">
