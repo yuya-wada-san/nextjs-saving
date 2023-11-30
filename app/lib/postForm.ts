@@ -80,13 +80,13 @@ export async function postForm(prevState: State, formData: FormData) {
   })
 
   const sheets = google.sheets({ auth, version: 'v4' });
-  
+
   try {
-    console.log(`${sheet}, ${date}. ${person}, ${store}, ${description}, ${category}, ${amount},`);
+    console.log(`${sheet}, ${date}. ${store}, ${description}, ${amount}, ${category}, ${person}`);
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: `${sheet}!A1:F1`,
+      range: `RawData_${sheet}!A1:F1`,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [

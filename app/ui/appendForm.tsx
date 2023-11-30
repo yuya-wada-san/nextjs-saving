@@ -26,11 +26,11 @@ export default function AppendForm() {
               <option value="" disabled>
                 Select a sheet
               </option>
-              <option key="RawData_Test" value="RawData_Test">
-                RawData_Test
+              <option key="RawData_Test" value="Test">
+                Test
               </option>
-              <option key="RawData_Dec23" value="RawData_Dec23">
-                RawData_Dec23
+              <option key="RawData_Dec23" value="Dec23">
+                Dec23
               </option>
             </select>
           </div>

@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default async function Page() {
 
-  const selectedSheet = 'Summary_Test';
+  const selectedSheet = 'Test';
   const titles: string[] = ['Yuya','Haruna','Total Share','onlyY','onlyH'];
-  const googleSheetData = await getGoogleSheetsData(`${selectedSheet}!B2:B6`);
+  const googleSheetData = await getGoogleSheetsData(`Summary_${selectedSheet}!B2:B6`);
 
   return (
     <main className="flex min-h-screen p-8 md:p-24">
