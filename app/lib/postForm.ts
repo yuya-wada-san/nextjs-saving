@@ -85,6 +85,6 @@ export async function postForm(prevState: State, formData: FormData) {
     };
   }
 
-  revalidatePath(`/pages/form`);
-  redirect('/pages/form');
+  revalidatePath(`/pages/saving`);
+  redirect('/pages/saving');
 }
