@@ -68,7 +68,7 @@ export async function postForm(prevState: State, formData: FormData) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: "RawData_Test!A1:F5",
+      range: "RawData_Test!A1:F1",
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [
