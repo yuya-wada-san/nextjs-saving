@@ -7,8 +7,20 @@ import { google } from "googleapis";
 
 const FormSchema = z.object({
   id: z.string(),
+  sheet: z.string({
+    invalid_type_error: 'Please select a sheet.',
+  }),
   person: z.string({
     invalid_type_error: 'Please select a person.',
+  }),
+  store: z.string({
+    invalid_type_error: 'Please enter a store name.',
+  }),
+  description: z.string({
+    invalid_type_error: 'Please enter a description.',
+  }),
+  category: z.string({
+    invalid_type_error: 'Please select a category.',
   }),
   amount: z.coerce
     .number()
@@ -20,7 +32,11 @@ const PostForm = FormSchema.omit({ id: true, data: true });
 
 export type State = {
   errors?: {
+    sheet?: string[];
     person?: string[];
+    store?: string[];
+    description?: string[];
+    category?: string[];
     amount?: string[];
   };
   message?: string | null;
@@ -28,18 +44,22 @@ export type State = {
 
 export async function postForm(prevState: State, formData: FormData) {
   const validatedFields = PostForm.safeParse({
+    sheet: formData.get('sheet'),
     person: formData.get('person'),
+    store: formData.get('store'),
+    description: formData.get('description'),
+    category: formData.get('category'),
     amount: formData.get('amount'),
   })
 
   if(!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Missing Fields. Failed to Create Invoice.',
+      message: 'Missing Fields. Failed to Create Expense.',
     };
   }
   
-  const { person, amount } = validatedFields.data;
+  const { sheet, person, store, description, category, amount } = validatedFields.data;
   const date = new Date().toISOString().split('T')[0].replace(/\-/g, '/');
   
   const auth = await google.auth.getClient({
@@ -59,20 +79,18 @@ export async function postForm(prevState: State, formData: FormData) {
     ]
   })
 
-  const sheets = google.sheets({
-      auth,
-      version: 'v4'
-  });
+  const sheets = google.sheets({ auth, version: 'v4' });
+  
   try {
-    console.log(`${person}, ${amount}, ${date}`);
+    console.log(`${sheet}, ${date}. ${person}, ${store}, ${description}, ${category}, ${amount},`);
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: "RawData_Test!A1:F1",
+      range: `${sheet}!A1:F1`,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [
-          [date, "Store Name", "Category", amount, "Other", person]
+          [date, store, description, amount, category, person]
         ]
       }
     });
@@ -81,7 +99,7 @@ export async function postForm(prevState: State, formData: FormData) {
 
   } catch (error) {
     return {
-      message: 'Database Error: Failed to Create Invoice.',
+      message: 'Database Error: Failed to Create Expense.',
     };
   }
 
