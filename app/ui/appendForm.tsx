@@ -9,7 +9,7 @@ export default function AppendForm() {
 
   return (    
     <form action={dispatch}>
-      <div className="rounded-md bg-gray-50 p-4 md:p-6">
+      <div className="rounded-md bg-gray-50 p-4 md:p-6 my-8">
         {/* Customer Name */}
         <div className="mb-4">
           <label htmlFor="person" className="mb-2 block text-sm font-medium">

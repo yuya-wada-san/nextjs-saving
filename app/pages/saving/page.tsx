@@ -10,7 +10,7 @@ export default async function Page() {
     <main className="flex min-h-screen p-8 md:p-24">
       <div className="max-w-5xl w-full font-mono">
         <h1 className="text-4xl w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Saving Data
+          Saving Summary Data
         </h1>
         <h2 className="text-2xl bg-gradient-to-b from-zinc-200 py-4 md:p-4 mt-4 backdrop-blur-2xl">November 2023</h2>
         <div className="grid grid-cols-1 gap-2 py-4 md:p-4">
@@ -28,7 +28,7 @@ export default async function Page() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Go to Sheet
+            Open the Sheet
           </a>
         </div>
         <div className="p-4 mt-4 text-center">
@@ -36,7 +36,7 @@ export default async function Page() {
             href="/pages/form"
             className="group rounded-lg border hover:border-transparent px-5 py-4 transition-colors border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           >
-            Go to Form
+            Create expense
           </Link>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default async function Page() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Go to Sheet
+            Open the Sheet
           </a>
         </div>
         <div className="p-4 mt-4 text-center">
@@ -22,7 +22,7 @@ export default async function Page() {
             href="/pages/saving"
             className="group rounded-lg border hover:border-transparent px-5 py-4 transition-colors border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           >
-            Go to Summary
+            Back to Summary
           </Link>
         </div>
       </div>
