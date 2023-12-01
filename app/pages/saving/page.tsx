@@ -8,38 +8,38 @@ export default async function Page() {
   const googleSheetData = await getGoogleSheetsData(`Summary_${selectedSheet}!B2:B6`);
 
   return (
-    <main className="flex min-h-screen p-8 md:p-24">
-      <div className="max-w-5xl w-full font-mono">
-        <h1 className="text-2xl md:text-4xl w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+    <main className="bg-slate-950 font-mono text-slate-400 min-h-screen p-8 md:p-24">
+      <div className="max-w-5xl w-full">
+        <h1 className="text-white text-2xl md:text-4xl w-full border-b border-slate-500 pb-6 pt-8 lg:w-auto lg:rounded-xl lg:border lg:p-4">
           Saving Summary
         </h1>
-        <h2 className="text-xl md:text-2xl bg-gradient-to-b from-zinc-200 py-4 md:p-4 mt-4 backdrop-blur-2xl">
+        <h2 className="text-xl md:text-2xl py-4 md:p-4 mt-4">
           Sheet: {selectedSheet}
         </h2>
         <div className="grid grid-cols-1 gap-2 py-4 md:p-4">
           {googleSheetData?.map((data, index) =>
-            <div className="grid grid-cols-2 max-w-xs border-b" key={index}>
+            <div className="grid grid-cols-2 max-w-xs border-b border-slate-500" key={index}>
               <p>{titles[index]}</p>
               <p className="text-right">{data}</p>
             </div>
           )}          
         </div>
 
-        <div className="md:flex md:items-between">
-          <div className="p-4 mt-4 text-center">
+        <div className="md:flex md:items-between md:gap-4">
+          <div className="hidden md:block mt-4 text-center">
             <a 
               href="https://docs.google.com/spreadsheets/d/1EXP7L9ZZJ5pDEAlYTrkDTgfcnVqdJieqPxCFKpWrJkY/edit#gid=0"
-              className="group rounded-lg border hover:border-transparent px-5 py-4 transition-colors border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+              className="text-center flex items-center justify-center gap-5 rounded-lg bg-slate-700 px-6 py-3 text-sm font-medium text-slate-200 transition-colors hover:bg-slate-600 md:text-base"
               target="_blank"
               rel="noopener noreferrer"
               >
               Open the Sheet
             </a>
           </div>
-          <div className="p-4 mt-4 text-center">
+          <div className="mt-4 text-center">
             <Link 
               href="/pages/form"
-              className="group rounded-lg border hover:border-transparent px-5 py-4 transition-colors border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+              className="flex items-center justify-center gap-5 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
               >
               Create expense
             </Link>

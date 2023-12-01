@@ -161,10 +161,10 @@ export default function AppendForm() {
 
       </div>
 
-      <div className="p-4 mt-4 text-center">
+      <div className="my-4">
         <button 
           type="submit"          
-          className="group rounded-lg border hover:border-transparent px-5 py-4 transition-colors border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          className="w-full flex items-center justify-center gap-5 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
         >
           Submit
         </button>
