@@ -19,10 +19,17 @@ export async function getGoogleSheetsData(range: string) {
 
   const sheets = google.sheets({ version: "v4", auth });
 
-  const data = await sheets.spreadsheets.values.get({
-    spreadsheetId: "1EXP7L9ZZJ5pDEAlYTrkDTgfcnVqdJieqPxCFKpWrJkY",
-    range: range,
-  });
+  try {
+    const data = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.SPREADSHEET_ID,
+      range: range,
+    });
+    
+    return data.data.values;
 
-  return data.data.values;
+  } catch (error) {    
+    return {
+      message: 'Fetched Error: Failed to Show Summary.',
+    };
+  }
 }

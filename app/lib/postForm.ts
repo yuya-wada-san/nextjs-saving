@@ -82,8 +82,6 @@ export async function postForm(prevState: State, formData: FormData) {
   const sheets = google.sheets({ auth, version: 'v4' });
 
   try {
-    console.log(`${sheet}, ${date}. ${store}, ${description}, ${amount}, ${category}, ${person}`);
-
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SPREADSHEET_ID,
       range: `RawData_${sheet}!A1:F1`,
@@ -95,11 +93,9 @@ export async function postForm(prevState: State, formData: FormData) {
       }
     });
 
-    console.log(response.statusText);
-
   } catch (error) {
     return {
-      message: 'Database Error: Failed to Create Expense.',
+      message: 'Database Error: Failed to Create Expenses.',
     };
   }
 
