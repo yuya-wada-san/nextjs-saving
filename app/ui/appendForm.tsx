@@ -9,7 +9,7 @@ export default function AppendForm() {
 
   return (    
     <form action={dispatch}>
-      <div className="rounded-md md:p-6 my-8">
+      <div className="rounded-md my-8">
 
         {/* Sheet Name */}
         <div className="mb-4">
@@ -20,7 +20,7 @@ export default function AppendForm() {
             <select
               id="sheet"
               name="sheet"
-              className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+              className="peer block w-full bg-slate-700 cursor-pointer rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
               defaultValue=""
             >
               <option value="" disabled>
@@ -48,7 +48,7 @@ export default function AppendForm() {
                 name="store"
                 type="text"
                 placeholder="Enter store name"
-                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
                 required
               />
             </div>
@@ -67,7 +67,7 @@ export default function AppendForm() {
                 name="description"
                 type="text"
                 placeholder="Enter description"
-                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
                 required
               />
             </div>
@@ -87,7 +87,7 @@ export default function AppendForm() {
                 type="number"
                 step="0.01"
                 placeholder="Enter AUD amount"
-                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
                 required
               />              
             </div>
@@ -103,7 +103,7 @@ export default function AppendForm() {
             <select
               id="category"
               name="category"
-              className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+              className="peer block w-full bg-slate-700 cursor-pointer rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
               defaultValue=""
             >
               <option value="" disabled>
@@ -137,7 +137,7 @@ export default function AppendForm() {
             <select
               id="person"
               name="person"
-              className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+              className="peer block w-full cursor-pointer bg-slate-700 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
               defaultValue=""
             >
               <option value="" disabled>
