@@ -1,34 +1,20 @@
 import { getGoogleSheetsData } from "@/app/lib/gsheets"
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Suspense } from "react";
+import Loading from "./Loading";
+import SummaryData from "@/app/ui/summaryData";
 
 export default async function Page() {
-
-  const selectedSheet = 'Test';
-  const titles: string[] = ['Yuya','Haruna','Total Share','onlyY','onlyH'];
-  const googleSheetData = await getGoogleSheetsData(`Summary_${selectedSheet}!B2:B6`);
-  const summaryData = googleSheetData?.length 
-          ? googleSheetData 
-          : ['unkown','unkown','unkown','unkown','unkown'];
-
   return (
     <main className="bg-slate-950 font-mono text-slate-400 min-h-screen p-8 md:p-24">
       <div className="max-w-5xl w-full">
         <h1 className="text-white text-2xl md:text-4xl w-full border-b border-slate-500 pb-6 pt-8 lg:w-auto lg:rounded-xl lg:border lg:p-4">
           Saving Summary
         </h1>
-        <h2 className="text-xl md:text-2xl py-4 md:p-4 mt-4">
-          Sheet: {selectedSheet}
-        </h2>
-        <div className="grid grid-cols-1 gap-2 py-4 md:p-4">
-          {summaryData?.map((data, index) =>
-            <div className="grid grid-cols-2 max-w-xs border-b border-slate-500" key={index}>
-              <p>{titles[index]}</p>
-              <p className="text-right">{data}</p>
-            </div>
-          )}          
-        </div>
-
+        <Suspense fallback={<Loading />}>
+          <SummaryData />
+        </Suspense>
         <div className="md:flex md:items-between md:gap-4">
           <div className="hidden md:block mt-4 text-center">
             <a 
