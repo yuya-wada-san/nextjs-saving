@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 
 export default function Home() {
@@ -11,9 +12,10 @@ export default function Home() {
         <p>Content: updating now by Next.js and using GoogleSpreadsheet as DB</p>
         <Link
           href="/pages/saving"
-          className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          className="flex items-center gap-2 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
         >
-          <span>Summary Page</span>
+          Summary Page
+          <ArrowRightIcon className="w-4" />
         </Link>
       </div>
     </main>
