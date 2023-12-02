@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="bg-slate-950 font-mono text-slate-400 min-h-screen p-8 md:p-24">
+    <main className="min-h-screen p-8 md:p-24">
       <div className="flex flex-col gap-4 max-w-5xl w-full">
         <h1 className="text-2xl md:text-4xl text-white w-full border-b border-slate-700 pb-6 pt-8 lg:w-auto  lg:rounded-xl lg:border lg:p-4">
           Saving Top

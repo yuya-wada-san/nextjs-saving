@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   return (
-    <main className="bg-slate-950 font-mono text-slate-400 min-h-screen p-8 md:p-24">
+    <main className="min-h-screen p-8 md:p-24">
       <div className="max-w-5xl w-full mx-auto">
         <h1 className="text-white text-2xl md:text-4xl w-full border-b border-slate-500 pb-6 pt-8 lg:w-auto lg:rounded-xl lg:border lg:p-4">
           Create Expense
