@@ -1,5 +1,6 @@
 import { getGoogleSheetsData } from "@/app/lib/gsheets"
 import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default async function Page() {
 
@@ -39,9 +40,10 @@ export default async function Page() {
           <div className="mt-4 text-center">
             <Link 
               href="/pages/form"
-              className="flex items-center justify-center gap-5 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+              className="flex items-center justify-between md:justify-center gap-2 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
               >
-              Create expense
+              Create Expense
+              <ArrowRightIcon className="w-4" />
             </Link>
           </div>
         </div>

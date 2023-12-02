@@ -94,9 +94,7 @@ export async function postForm(prevState: State, formData: FormData) {
     });
 
   } catch (error) {
-    return {
-      message: 'Database Error: Failed to Create Expenses.',
-    };
+    return { message: 'Database Error: Failed to Create Expenses.', };
   }
 
   revalidatePath(`/pages/saving`);
