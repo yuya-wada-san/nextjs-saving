@@ -3,6 +3,11 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Suspense } from "react";
 import Loading from "./Loading";
 import SummaryData from "@/app/ui/summaryData";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Summary',
+};
 
 export default async function Page() {
   return (

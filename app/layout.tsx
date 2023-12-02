@@ -5,7 +5,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Saving - Yuya',
+  title: {
+    template: '%s | Yuya',
+    default: 'Saving | Yuya',
+  },
   description: 'Saving Money by create next app',
 }
 

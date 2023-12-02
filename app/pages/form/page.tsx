@@ -1,6 +1,11 @@
 import AppendForm from "@/app/ui/appendForm";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: 'Form',
+};
 
 export default async function Page() {
   return (
