@@ -28,6 +28,6 @@ export async function getGoogleSheetsData(range: string) {
     return data.data.values;
 
   } catch (error) {    
-    return { message: 'Fetched Error: Failed to Show Summary.', };
+    return [];
   }
 }
