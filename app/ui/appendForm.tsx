@@ -34,6 +34,14 @@ export default function AppendForm() {
               </option>
             </select>
           </div>
+          <div id="sheet-error" aria-live="polite" aria-atomic="true">
+            {state.errors?.sheet &&
+              state.errors.sheet.map((error: string) => (
+                <p className="mt-2 text-sm text-red-500" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
         </div>
 
         {/* Store Name */}
@@ -126,6 +134,14 @@ export default function AppendForm() {
               </option>
             </select>
           </div>
+          <div id="category-error" aria-live="polite" aria-atomic="true">
+            {state.errors?.category &&
+              state.errors.category.map((error: string) => (
+                <p className="mt-2 text-sm text-red-500" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
         </div>
 
         {/* Person Name */}
@@ -156,6 +172,14 @@ export default function AppendForm() {
                 onlyH
               </option>
             </select>
+          </div>
+          <div id="person-error" aria-live="polite" aria-atomic="true">
+            {state.errors?.person &&
+              state.errors.person.map((error: string) => (
+                <p className="mt-2 text-sm text-red-500" key={error}>
+                  {error}
+                </p>
+              ))}
           </div>
         </div>
 
