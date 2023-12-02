@@ -1,16 +1,17 @@
+'use server';
+
 import { getGoogleSheetsData } from "@/app/lib/gsheets";
 
-export default async function SummaryData() {
-
-  const selectedSheet = 'Test';
+export default async function SummaryData(sheet: string[]) {
+  const selectedSheet: string = sheet.sheet;
   const titles: string[] = ['Yuya','Haruna','Total Share','onlyY','onlyH'];
   const googleSheetData = await getGoogleSheetsData(`Summary_${selectedSheet}!B2:B6`);
   const summaryData = googleSheetData?.length 
           ? googleSheetData 
           : ['unkown','unkown','unkown','unkown','unkown'];
   return (
-    <>
-      <h2 className="text-xl md:text-2xl py-4 md:p-4 mt-4">
+    <div className="my-8">
+      <h2 className="text-xl md:text-2xl">
         Sheet: {selectedSheet}
       </h2>
       <div className="grid grid-cols-1 gap-2 py-4 md:p-4">
@@ -23,6 +24,6 @@ export default async function SummaryData() {
           );
         })}
       </div>
-    </>
+    </div>
   )
 }

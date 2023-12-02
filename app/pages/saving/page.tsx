@@ -1,4 +1,3 @@
-import { getGoogleSheetsData } from "@/app/lib/gsheets"
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Suspense } from "react";
@@ -13,7 +12,10 @@ export default async function Page() {
           Saving Summary
         </h1>
         <Suspense fallback={<Loading />}>
-          <SummaryData />
+          <SummaryData sheet="Test" />
+        </Suspense>
+        <Suspense fallback={<Loading />}>
+          <SummaryData sheet="Dec23" />
         </Suspense>
         <div className="md:flex md:items-between md:gap-4">
           <div className="hidden md:block mt-4 text-center">
