@@ -4,9 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: {
     template: '%s | Yuya',
-    default: 'Saving | Yuya',
+    default: 'Expense Mng Tool | Yuya',
   },
-  description: 'Saving Money by create next app',
+  description: 'Expense Mnagement Tool by next app',
 }
 
 export default function RootLayout({

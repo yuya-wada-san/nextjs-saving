@@ -1,10 +1,9 @@
-TOP: https://nextjs-saving.vercel.app/
-Summary: 
+https://nextjs-saving.vercel.app/
 
 ## Abstract
 
 This is my own expense management tool.
-My uniq point is google spreadsheet as databse becouse of free.
+My uniq point is google spreadsheet as databse for free.
 
 If you want to try creating expenses, please use "Test" sheet I prepared for visitors.
 
