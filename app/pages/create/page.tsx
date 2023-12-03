@@ -17,7 +17,7 @@ export default async function Page() {
         <AppendForm />
         <div className="mt-8">
           <Link 
-            href="/pages/saving"
+            href="/pages/summary"
             className="text-center flex items-center justify-center gap-2 rounded-lg bg-slate-700 px-6 py-3 text-sm font-medium text-slate-200 transition-colors hover:bg-slate-600 md:text-base"
           >
             <ArrowLeftIcon className="w-4" />

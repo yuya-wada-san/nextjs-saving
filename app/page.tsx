@@ -9,7 +9,7 @@ export default function Home() {
           Expense Management Tool
         </h1>
         <Link
-          href="/pages/saving"
+          href="/pages/summary"
           className="w-full md:w-auto my-4 flex items-center gap-2 justify-between md:self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
         >
           Expense Summary

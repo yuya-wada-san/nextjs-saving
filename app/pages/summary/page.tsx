@@ -36,7 +36,7 @@ export default async function Page() {
             </div>
             <div className="mt-4 text-center">
               <Link 
-                href="/pages/form"
+                href="/pages/create"
                 className="flex items-center justify-between md:justify-center gap-2 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
                 >
                 Create Expense
