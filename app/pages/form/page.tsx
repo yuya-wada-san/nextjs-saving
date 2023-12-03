@@ -11,7 +11,7 @@ export default async function Page() {
   return (
     <main className="min-h-screen p-8 md:p-24">
       <div className="max-w-5xl w-full mx-auto">
-        <h1 className="text-white text-2xl md:text-4xl w-full border-b border-slate-500 pb-6 pt-8 lg:w-auto lg:rounded-xl lg:border lg:p-4">
+        <h1 className="text-white w-full border-b border-slate-500 pb-6 pt-8 lg:w-auto lg:rounded-xl lg:border lg:p-4">
           Create Expense
         </h1>
         <AppendForm />

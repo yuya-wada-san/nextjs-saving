@@ -14,7 +14,7 @@ export default async function SummaryData({
           : ['unkown','unkown','unkown','unkown','unkown'];
   return (
     <div className="my-8">
-      <h2 className="text-xl md:text-2xl">
+      <h2>
         Sheet: {sheet}
       </h2>
       <div className="grid grid-cols-1 gap-2 py-4 md:p-4">
