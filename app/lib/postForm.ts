@@ -97,6 +97,6 @@ export async function postForm(prevState: State, formData: FormData) {
     return { message: 'Database Error: Failed to Create Expenses.', };
   }
 
-  revalidatePath(`/pages/saving`);
-  redirect('/pages/saving');
+  revalidatePath(`/pages/summary`);
+  redirect('/pages/summary');
 }
