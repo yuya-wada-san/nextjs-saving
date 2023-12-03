@@ -1,7 +1,6 @@
 'use server';
 
 import { z } from "zod";
-import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { google } from "googleapis";
 
@@ -97,6 +96,5 @@ export async function postForm(prevState: State, formData: FormData) {
     return { message: 'Database Error: Failed to Create Expenses.', };
   }
 
-  revalidatePath(`/pages/summary`);
   redirect('/pages/summary');
 }
