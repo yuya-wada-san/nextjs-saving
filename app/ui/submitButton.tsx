@@ -1,4 +1,4 @@
-import { useFormStatus } from "react-dom";  // useFormStatusをimport
+import { useFormStatus } from "react-dom";
 import { PacmanLoader } from "react-spinners";
 
 export default function SubmitButton() {

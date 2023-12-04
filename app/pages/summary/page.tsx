@@ -23,7 +23,7 @@ export default async function Page() {
           <Suspense fallback={<Loading />}>
             <SummaryData sheet="Dec23" />
           </Suspense>
-          <div className=" md:flex md:items-between md:gap-4">
+          <div className="mt-4 md:flex md:items-between md:gap-4">
             <div className="hidden md:block mt-4 text-center">
               <a 
                 href="https://docs.google.com/spreadsheets/d/1EXP7L9ZZJ5pDEAlYTrkDTgfcnVqdJieqPxCFKpWrJkY/edit#gid=0"

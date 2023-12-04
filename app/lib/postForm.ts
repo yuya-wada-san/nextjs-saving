@@ -93,6 +93,8 @@ export async function postForm(prevState: State, formData: FormData) {
       }
     });
 
+    console.log(`response status = ${response.status}`);
+
   } catch (error) {
     return { message: 'Database Error: Failed to Create Expenses.', };
   }

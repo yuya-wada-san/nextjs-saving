@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import Border from "@/app/ui/border"
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <Link
           href="/pages/summary"
           className="w-full md:w-auto my-4 flex items-center gap-2 justify-between md:self-start rounded-lg bg-sky-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-400 md:text-base"
-        >
+          >
           Expense Summary
           <ArrowRightIcon className="w-4" />
         </Link>
@@ -20,7 +21,7 @@ export default function Home() {
           I want to share the expenses with my partner.<br />
           At the end of the month, we can check the summary page to see who paid the most and how much.
         </p>
-        <span className="w-full border-b my-2 md:mt-3 opacity-30" />
+        <Border />
         <h2>Assets</h2>
         <p>
           - Front<br />
@@ -34,16 +35,16 @@ export default function Home() {
           <span className="p-2" />- Versel<br />
           <br />
           - Code<br />
-            <a href="https://github.com/yuya-wada-san/nextjs-saving" className="p-2">- <span className="underline">GitHub</span></a>
+          <a href="https://github.com/yuya-wada-san/nextjs-saving" className="p-2">- <span className="underline">GitHub</span></a>
         </p>
-        <span className="w-full border-b my-2 md:mt-3 opacity-30" />
+        <Border />
         <h2>How to test</h2>
         <p>
           You can use Test sheet.<br />
           Please select &quot;Test&quot; sheet on &quot;Creating expense&quot; page.<br />
           it will react summary in &quot;Sheet: Test&quot;.
         </p>
-        <span className="w-full border-b my-2 md:mt-3 opacity-30" />
+        <Border />
         <h2>Contact</h2>
         <div className="max-w-[200px] grid gap-1">
           <p className="grid grid-cols-2">

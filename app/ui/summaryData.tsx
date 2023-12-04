@@ -13,7 +13,7 @@ export default async function SummaryData({
           ? googleSheetData 
           : ['unkown','unkown','unkown','unkown','unkown'];
   return (
-    <div className="my-8">
+    <div className="mt-6 md:mt-8">
       <h2>
         Sheet: {sheet}
       </h2>
