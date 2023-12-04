@@ -10,7 +10,7 @@ export default function Home() {
         </h1>
         <Link
           href="/pages/summary"
-          className="w-full md:w-auto my-4 flex items-center gap-2 justify-between md:self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          className="w-full md:w-auto my-4 flex items-center gap-2 justify-between md:self-start rounded-lg bg-sky-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-400 md:text-base"
         >
           Expense Summary
           <ArrowRightIcon className="w-4" />
@@ -37,7 +37,7 @@ export default function Home() {
             <a href="https://github.com/yuya-wada-san/nextjs-saving" className="p-2">- <span className="underline">GitHub</span></a>
         </p>
         <span className="w-full border-b my-2 md:mt-3 opacity-30" />
-        <h2>How to try</h2>
+        <h2>How to test</h2>
         <p>
           You can use Test sheet.<br />
           Please select &quot;Test&quot; sheet on &quot;Creating expense&quot; page.<br />

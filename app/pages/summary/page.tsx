@@ -37,7 +37,7 @@ export default async function Page() {
             <div className="mt-4 text-center">
               <Link 
                 href="/pages/create"
-                className="flex items-center justify-between md:justify-center gap-2 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+                className="flex items-center justify-between md:justify-center gap-2 rounded-lg bg-sky-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-400 md:text-base"
                 >
                 Create Expense
                 <ArrowRightIcon className="w-4" />

@@ -2,6 +2,7 @@
 
 import { State, postForm } from '@/app/lib/postForm';
 import { useFormState } from 'react-dom';
+import SubmitButton from '@/app/ui/submitButton';
 
 export default function AppendForm() {
   const initialState: State = { message: null, errors: {} };
@@ -75,8 +76,7 @@ export default function AppendForm() {
                 name="description"
                 type="text"
                 placeholder="Enter description"
-                className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
-                required
+                className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"                
               />
             </div>
           </div>
@@ -184,15 +184,7 @@ export default function AppendForm() {
         </div>
 
       </div>
-
-      <div className="my-4">
-        <button 
-          type="submit"          
-          className="w-full flex items-center justify-center gap-5 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-        >
-          Submit
-        </button>
-      </div>
+      <SubmitButton />
     </form>
   )
 }
