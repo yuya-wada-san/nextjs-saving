@@ -2,29 +2,28 @@
 
 import { getGoogleSheetsData } from "@/app/lib/gsheets";
 
-export default async function SummaryData({
+export default async function RecentData({
   sheet
 }: {
   sheet: string,
 }) {
-  const summaryData = await getGoogleSheetsData(`Summary_${sheet}!A2:B6`);
+  const recentData = await getGoogleSheetsData(`Summary_${sheet}!A12:B12`);
   return (
-    <div className="mt-10">
-      <h2>
-        <small>Sheet:</small>
-        {sheet}
-      </h2>
+    <div>
       <h3 className="mt-4 mb-2">
-        Summary
+        Latest
       </h3>
       <div className="grid grid-cols-1 gap-2 md:px-4">
-        {summaryData?.map((value, index) => {
+        {recentData?.map((value, index) => {
           return (
-            <div className="grid grid-cols-2 max-w-xs border-b border-slate-500" key={index}>
+            <div 
+              className="grid grid-cols-2 max-w-xs border-b border-slate-500"
+              key={index}
+              >
               <p>{value[0]}</p>
               <p className="text-right">{value[1]} AUD</p>
             </div>
-          );
+          )
         })}
       </div>
     </div>

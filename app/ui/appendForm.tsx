@@ -159,11 +159,11 @@ export default function AppendForm() {
               <option value="" disabled>
                 Select a person
               </option>
-              <option key="Yuya" value="Yuya">
-                Yuya
+              <option key="shareY" value="shareY">
+                shareY
               </option>
-              <option key="Haruna" value="Haruna">
-                Haruna
+              <option key="shareH" value="shareH">
+                shareH
               </option>
               <option key="onlyY" value="onlyY">
                 onlyY
