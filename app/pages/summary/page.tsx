@@ -19,13 +19,13 @@ export default async function Page() {
         </h1>
         <div className="flex flex-col justify-center">
           <div className="md:flex md:justify-center md:gap-4">
-            <div className="min-w-[360px]">
+            <div className="md:min-w-[360px]">
               <Suspense fallback={<Loading />}>
                 <SummaryData sheet="Test" />
                 <RecentData sheet="Test" />
               </Suspense>
             </div>
-            <div className="min-w-[360px]">
+            <div className="md:min-w-[360px]">
               <Suspense fallback={<Loading />}>
                 <SummaryData sheet="Dec23" />
                 <RecentData sheet="Dec23" />
