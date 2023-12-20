@@ -39,7 +39,7 @@ export default function Navbar() {
             >
             Login
           </button>
-				)}
+				)}          
       </div>
     </header>
   );
