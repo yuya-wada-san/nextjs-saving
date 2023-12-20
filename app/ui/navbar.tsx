@@ -15,7 +15,15 @@ export default function Navbar() {
           <Link href="/pages/create" className="mr-5 border-b hover:text-white">Create</Link>
         </nav>
         {status === 'authenticated' ? (
-					<div className="md:grid items-center">
+					<div className="md:flex md:items-center md:gap-2">
+            <Image
+              src={session.user?.image ?? ``}
+              alt="user icon"
+              className="mx-auto rounded-full"
+              width={32}
+              height={32}
+              onClick={() => signOut()}
+            />
 						<div className="hidden md:block">
               <button 
                 className="py-2 px-4 rounded-lg bg-slate-700 text-sm font-medium text-white transition-colors hover:bg-slate-600 md:text-base"
@@ -24,14 +32,6 @@ export default function Navbar() {
                 Logout
               </button>
 						</div>
-						<Image
-							src={session.user?.image ?? ``}
-							alt="user icon"
-							className="mx-auto rounded-full"
-							width={32}
-							height={32}
-              onClick={() => signOut()}
-						/>
 					</div>
 				) : (
           <button 
