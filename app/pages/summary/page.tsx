@@ -5,6 +5,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import Loading from "./Loading";
 import SummaryData from "@/app/ui/summaryData";
 import RecentData from "@/app/ui/recentData";
+import Navbar from "@/app/ui/navbar";
 
 export const metadata: Metadata = {
   title: 'Summary',
@@ -12,8 +13,9 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   return (
-    <main className="min-h-screen p-8 md:px-24">
-      <div className="max-w-5xl w-full mx-auto">
+    <main>
+      <Navbar />
+      <div className="min-h-screen p-8 md:px-24 max-w-5xl w-full mx-auto">
         <h1 className="text-white w-full border-b border-slate-500 pb-6 lg:w-auto lg:rounded-xl lg:border lg:p-4">
           Expense Summary
         </h1>
