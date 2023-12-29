@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="min-h-screen p-8 md:px-24 flex flex-col gap-4 max-w-5xl w-full">
+      <div className="mx-auto min-h-screen p-8 md:px-24 flex flex-col gap-4 max-w-5xl w-full">
         <h1 className="text-white w-full border-b border-slate-700 pb-6 md:pt-8 lg:w-auto lg:rounded-xl lg:border lg:p-4">
           Expense Management Tool
         </h1>

@@ -8,7 +8,7 @@ export default function Navbar() {
 	const { data: session, status } = useSession();
   return (
     <header className="py-4 px-8 md:px-24 font-mono text-slate-300 bg-sky-700">
-      <div className="max-w-5xl flex justify-between items-center">
+      <div className="mx-auto max-w-5xl flex justify-between items-center">
         <nav className="flex">
           <Link href="/" className="mr-5 border-b hover:text-white font-bold">Home</Link>
           <Link href="/pages/summary" className="mr-5 border-b hover:text-white">Summary</Link>
