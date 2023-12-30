@@ -44,7 +44,7 @@ export default function Home() {
         <p>
           You can use Test sheet.<br />
           Please select &quot;Test&quot; sheet on &quot;Creating expense&quot; page.<br />
-          it will react summary in &quot;Sheet: Test&quot;.
+          it links summary in &quot;Sheet: Test&quot;.
         </p>
         <Border />
         <h2>Contact</h2>
