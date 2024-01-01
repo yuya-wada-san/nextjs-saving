@@ -29,8 +29,8 @@ export default async function Page() {
             </div>
             <div className="md:min-w-[360px]">
               <Suspense fallback={<Loading />}>
-                <SummaryData sheet="Dec23" />
-                <RecentData sheet="Dec23" />
+                <SummaryData sheet="Jan24" />
+                <RecentData sheet="Jan24" />
               </Suspense>
             </div>
           </div>
