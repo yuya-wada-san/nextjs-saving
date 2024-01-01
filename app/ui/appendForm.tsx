@@ -30,9 +30,6 @@ export default function AppendForm() {
               <option key="RawData_Test" value="Test">
                 Test
               </option>
-              <option key="RawData_Dec23" value="Dec23">
-                Dec23
-              </option>
               <option key="RawData_Jan24" value="Jan24">
                 Jan24
               </option>
