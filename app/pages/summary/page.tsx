@@ -21,7 +21,7 @@ export default async function Page() {
         </h1>
         <div className="flex flex-col justify-center">
           <div className="md:flex md:justify-center md:gap-4">
-            <div className="md:min-w-[360px]">
+            <div>
               <Suspense fallback={<Loading />}>
                 <SummaryData sheet="Jan24" />
                 <RecentData sheet="Jan24" />

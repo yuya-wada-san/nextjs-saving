@@ -7,7 +7,7 @@ export default async function RecentData({
 }: {
   sheet: string,
 }) {
-  const recentData = await getGoogleSheetsData(`Summary_${sheet}!A12:B12`);
+  const recentData = await getGoogleSheetsData(`Summary_${sheet}!A10:C10`);
   return (
     <div>
       <h3 className="mt-4 mb-2">
@@ -17,11 +17,12 @@ export default async function RecentData({
         {recentData?.map((value, index) => {
           return (
             <div 
-              className="grid grid-cols-2 max-w-xs border-b border-slate-500"
+              className="grid grid-cols-3 max-w-md border-b border-slate-500"
               key={index}
               >
               <p>{value[0]}</p>
-              <p className="text-right">{value[1]} AUD</p>
+              <p>{value[1]} </p>
+              <p className="text-right">{value[2]} AUD</p>
             </div>
           )
         })}
