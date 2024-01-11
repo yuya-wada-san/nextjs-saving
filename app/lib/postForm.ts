@@ -9,18 +9,21 @@ const FormSchema = z.object({
   sheet: z.string({
     invalid_type_error: 'Please select a sheet.',
   }),
-  store: z.string({
-    invalid_type_error: 'Please enter a store name.',
-  }),
-  description: z.string({
-    invalid_type_error: 'Please enter a description.',
-  }),
   category: z.string({
     invalid_type_error: 'Please select a category.',
   }),
   amount: z.coerce
     .number()
     .gt(0, { message: 'Please enter an amount greater than $0.' }),
+  store: z.string({
+    invalid_type_error: 'Please enter a store name.',
+  }),
+  description: z.string({
+    invalid_type_error: 'Please enter a description.',
+  }),
+  person: z.string({
+    invalid_type_error: 'Please enter a person.',
+  }),
   data: z.string(),
 });
 
@@ -29,10 +32,11 @@ const PostForm = FormSchema.omit({ id: true, data: true });
 export type State = {
   errors?: {
     sheet?: string[];
-    store?: string[];
-    description?: string[];
     category?: string[];
     amount?: string[];
+    store?: string[];
+    description?: string[];
+    person?: string[];
   };
   message?: string | null;
 }
@@ -41,10 +45,11 @@ export async function postForm(prevState: State, formData: FormData) {
 
   const validatedFields = PostForm.safeParse({
     sheet: formData.get('sheet'),
-    store: formData.get('store'),
-    description: formData.get('description'),
     category: formData.get('category'),
     amount: formData.get('amount'),
+    store: formData.get('store'),
+    description: formData.get('description'),
+    person: formData.get('person'),
   })
 
   if(!validatedFields.success) {
@@ -54,7 +59,7 @@ export async function postForm(prevState: State, formData: FormData) {
     };
   }
   
-  const { sheet, store, description, category, amount } = validatedFields.data;
+  const { sheet, category, amount, store, description, person } = validatedFields.data;
   const date = new Date().toISOString().split('T')[0].replace(/\-/g, '/');
   
   const auth = await google.auth.getClient({
@@ -83,7 +88,7 @@ export async function postForm(prevState: State, formData: FormData) {
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [
-          [date, store, description, amount, category]
+          [date, store, description, amount, category, person]
         ]
       }
     });

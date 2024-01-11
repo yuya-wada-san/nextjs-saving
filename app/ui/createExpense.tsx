@@ -3,10 +3,14 @@
 import { State, postForm } from '@/app/lib/postForm';
 import { useFormState } from 'react-dom';
 import SubmitButton from '@/app/ui/submitButton';
+import { useSession } from 'next-auth/react';
 
 export default function CreateExpense() {
   const initialState: State = { message: null, errors: {} };
   const [state, dispatch] = useFormState(postForm, initialState);
+
+	const { data: session, status } = useSession();
+  const person = session?.user?.name ? session?.user?.name : 'guest';
 
   return (    
     <form action={dispatch}>
@@ -144,6 +148,24 @@ export default function CreateExpense() {
                 name="description"
                 type="text"
                 placeholder="メモを入力"
+                className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"                
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* person */}
+        <div className="mb-4">
+          <label htmlFor="description" className="mb-2 block text-sm font-medium">
+            Author: {person}
+          </label>
+          <div className="relative mt-2 rounded-md">
+            <div className="relative">
+              <input
+                id="person"
+                name="person"
+                type="hidden"
+                defaultValue={person}
                 className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"                
               />
             </div>
