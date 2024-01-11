@@ -1,4 +1,4 @@
-import AppendForm from "@/app/ui/appendForm";
+import CreateExpense from "@/app/ui/createExpense";
 import Navbar from "@/app/ui/navbar";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
@@ -16,7 +16,7 @@ export default async function Page() {
         <h1 className="text-white w-full border-b border-slate-500 pb-6 lg:w-auto lg:rounded-xl lg:border lg:p-4">
           Create Expense
         </h1>
-        <AppendForm />
+        <CreateExpense />
         <div className="mt-8">
           <Link 
             href="/pages/summary"

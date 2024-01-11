@@ -9,9 +9,6 @@ const FormSchema = z.object({
   sheet: z.string({
     invalid_type_error: 'Please select a sheet.',
   }),
-  person: z.string({
-    invalid_type_error: 'Please select a person.',
-  }),
   store: z.string({
     invalid_type_error: 'Please enter a store name.',
   }),
@@ -32,7 +29,6 @@ const PostForm = FormSchema.omit({ id: true, data: true });
 export type State = {
   errors?: {
     sheet?: string[];
-    person?: string[];
     store?: string[];
     description?: string[];
     category?: string[];
@@ -45,7 +41,6 @@ export async function postForm(prevState: State, formData: FormData) {
 
   const validatedFields = PostForm.safeParse({
     sheet: formData.get('sheet'),
-    person: formData.get('person'),
     store: formData.get('store'),
     description: formData.get('description'),
     category: formData.get('category'),
@@ -59,7 +54,7 @@ export async function postForm(prevState: State, formData: FormData) {
     };
   }
   
-  const { sheet, person, store, description, category, amount } = validatedFields.data;
+  const { sheet, store, description, category, amount } = validatedFields.data;
   const date = new Date().toISOString().split('T')[0].replace(/\-/g, '/');
   
   const auth = await google.auth.getClient({
@@ -88,7 +83,7 @@ export async function postForm(prevState: State, formData: FormData) {
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [
-          [date, store, description, amount, category, person]
+          [date, store, description, amount, category]
         ]
       }
     });
