@@ -15,13 +15,15 @@ export default function Home() {
           href="/pages/summary"
           className="w-full md:w-auto my-4 flex items-center gap-2 justify-between md:self-start rounded-lg bg-sky-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-400 md:text-base"
           >
-          Expense Summary
+          Summary Page
           <ArrowRightIcon className="w-4" />
         </Link>
-        <h2>Motivation</h2>
+        <h2>Abstract</h2>
         <p>
-          I want to share the expenses with my partner.<br />
-          At the end of the month, we can check the summary page to see who paid the most and how much.
+          自分用の支出管理ツール<br />
+          データベースは無料のスプレッドシートを使用しました<br />
+          ログインすると支出入力時に名前が自動的に入ります<br />
+          支出入力は "Test" シートで動作確認できます
         </p>
         <Border />
         <h2>Assets</h2>
@@ -33,18 +35,10 @@ export default function Home() {
           <br />
           - Back<br />
           <span className="p-2" />- Database: Google Spreadsheet<br />
-          <span className="p-2" />- Google Sheets API<br />
           <span className="p-2" />- Versel<br />
           <br />
           - Code<br />
           <a href="https://github.com/yuya-wada-san/nextjs-saving" className="p-2">- <span className="underline">GitHub</span></a>
-        </p>
-        <Border />
-        <h2>How to test</h2>
-        <p>
-          You can use Test sheet.<br />
-          Please select &quot;Test&quot; sheet on &quot;Creating expense&quot; page.<br />
-          it links summary in &quot;Sheet: Test&quot;.
         </p>
         <Border />
         <h2>Contact</h2>
@@ -54,16 +48,8 @@ export default function Home() {
             <span>Yuya Wada</span>
           </p>
           <p className="grid grid-cols-2">
-            <span>Tel:</span>
-            <span>0434997115</span>
-          </p>
-          <p className="grid grid-cols-2">
-            <span>Mail:</span>
+            <span>Email:</span>
             <span>yuya.wada.san@gmail.com</span>
-          </p>
-          <p className="grid grid-cols-2">
-            <span>Address:</span>
-            <span>Melbourne</span>
           </p>
         </div>
       </div>
