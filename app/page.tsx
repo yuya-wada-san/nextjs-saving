@@ -23,7 +23,7 @@ export default function Home() {
           自分用の支出管理ツール<br />
           データベースは無料のスプレッドシートを使用しました<br />
           ログインすると支出入力時に名前が自動的に入ります<br />
-          支出入力は "Test" シートで動作確認できます
+          支出入力は &quot;Test&quot; シートで動作確認できます
         </p>
         <Border />
         <h2>Assets</h2>
