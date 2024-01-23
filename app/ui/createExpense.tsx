@@ -108,7 +108,7 @@ export default function CreateExpense() {
                 id="amount"
                 name="amount"
                 type="number"
-                step="0.1"
+                step="0.01"
                 placeholder="金額を入力 [AUD]"
                 className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
                 required
