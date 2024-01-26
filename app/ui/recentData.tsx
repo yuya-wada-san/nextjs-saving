@@ -17,11 +17,11 @@ export default async function RecentData({
         {recentData?.map((value, index) => {
           return (
             <div 
-              className="grid grid-cols-3 max-w-md border-b border-slate-500"
+              className="grid grid-cols-3 border-b border-slate-500"
               key={index}
               >
               <p>{value[0]}</p>
-              <p>{value[1]} </p>
+              <p className="text-center">{value[1]} </p>
               <p className="text-right">{value[2]} AUD</p>
             </div>
           )

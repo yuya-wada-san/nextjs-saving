@@ -21,28 +21,28 @@ export default async function Page() {
         </h1>
         <div className="flex flex-col justify-center">
           <div className="md:flex md:justify-center md:gap-4">
-            <div>
+            <div className="w-full md:w-2/3">
               <Suspense fallback={<Loading />}>
                 <SummaryData sheet="Jan24" />
                 <RecentData sheet="Jan24" />
               </Suspense>
             </div>
           </div>
-          <div className="mt-8 md:flex md:justify-center md:gap-8">
-            <div className="hidden md:block mt-4 text-center">
+          <div className="mt-8 md:flex md:justify-center md:gap-8 md:w-2/3 md:mx-auto md:px-4">
+            <div className="hidden md:block mt-4 text-center w-full">
               <a 
                 href="https://docs.google.com/spreadsheets/d/1EXP7L9ZZJ5pDEAlYTrkDTgfcnVqdJieqPxCFKpWrJkY/edit#gid=0"
-                className="min-w-[220px] text-center flex items-center justify-center gap-5 rounded-lg bg-slate-700 px-6 py-3 text-sm font-medium text-slate-200 transition-colors hover:bg-slate-600 md:text-base"
+                className="text-center flex items-center justify-center gap-5 rounded-lg bg-slate-700 px-6 py-3 text-sm font-medium text-slate-200 transition-colors hover:bg-slate-600 md:text-base"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
                 Open Database
               </a>
             </div>
-            <div className="mt-4 text-center">
+            <div className="mt-4 text-center w-full">
               <Link 
                 href="/pages/create"
-                className="min-w-[220px] flex items-center justify-between md:justify-center gap-2 rounded-lg bg-sky-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-400 md:text-base"
+                className="flex items-center justify-between md:justify-center gap-2 rounded-lg bg-sky-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-400 md:text-base"
                 >
                 Create Expense
                 <ArrowRightIcon className="w-4" />
