@@ -2,15 +2,14 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import Border from "@/app/ui/border"
 import Navbar from "./ui/navbar"
+import Title from "@/app/ui/title"
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <div className="mx-auto min-h-screen p-8 md:px-24 flex flex-col gap-4 max-w-5xl w-full">
-        <h1 className="text-white w-full border-b border-slate-700 pb-6 md:pt-8 lg:w-auto lg:rounded-xl lg:border lg:p-4">
-          Expense Management Tool
-        </h1>
+        <Title title="Expense Management Tool" />
         <Link
           href="/pages/summary"
           className="w-full md:w-auto my-4 flex items-center gap-2 justify-between md:self-start rounded-lg bg-sky-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-sky-400 md:text-base"

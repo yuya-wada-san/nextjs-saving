@@ -1,5 +1,6 @@
 import CreateExpense from "@/app/ui/createExpense";
 import Navbar from "@/app/ui/navbar";
+import Title from "@/app/ui/title";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -13,9 +14,7 @@ export default async function Page() {
     <main>
       <Navbar />
       <div className="min-h-screen p-8 md:px-24 max-w-5xl w-full mx-auto">
-        <h1 className="text-white w-full border-b border-slate-500 pb-6 lg:w-auto lg:rounded-xl lg:border lg:p-4">
-          Create Expense
-        </h1>
+        <Title title="Create Expense" />
         <CreateExpense />
         <div className="mt-8">
           <Link 
