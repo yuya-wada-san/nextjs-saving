@@ -34,8 +34,8 @@ export default function CreateExpense() {
               <option key="RawData_Test" value="Test">
                 Test
               </option>
-              <option key="RawData_Jan24" value="Jan24">
-                Jan24
+              <option key="RawData_Feb24" value="Feb24">
+                Feb24
               </option>
             </select>
           </div>

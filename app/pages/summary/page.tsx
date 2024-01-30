@@ -22,8 +22,8 @@ export default async function Page() {
           <div className="md:flex md:justify-center md:gap-4">
             <div className="w-full md:w-2/3">
               <Suspense fallback={<Loading />}>
-                <SummaryData sheet="Jan24" />
-                <RecentData sheet="Jan24" />
+                <SummaryData sheet="Feb24" />
+                <RecentData sheet="Feb24" />
               </Suspense>
             </div>
           </div>
