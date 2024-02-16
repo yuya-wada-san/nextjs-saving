@@ -7,7 +7,8 @@ export default async function SummaryData({
 }: {
   sheet: string,
 }) {
-  const summaryData = await getGoogleSheetsData(`Summary_${sheet}!A2:B9`);
+  const sheetName = `Summary_${sheet}!A2:B9`;
+  const summaryData = await getGoogleSheetsData(sheetName);
   return (
     <div className="mt-10">
       <h2 className="text-right md:pr-4">
@@ -26,7 +27,7 @@ export default async function SummaryData({
               key={index}
             >
               <p>{value[0]}</p>
-              <p className="text-right">{value[1]} AUD</p>
+              <p className="text-right">{value[1]}</p>
             </div>
           );
         })}

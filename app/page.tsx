@@ -5,6 +5,7 @@ import Navbar from "./ui/navbar"
 import Title from "@/app/ui/title"
 
 export default function Home() {
+  const githubUrl = "https://github.com/yuya-wada-san/nextjs-saving";
   return (
     <main>
       <Navbar />
@@ -18,30 +19,35 @@ export default function Home() {
           <ArrowRightIcon className="w-4" />
         </Link>
         <h2>Abstract</h2>
-        <p>
-          自分用の支出管理ツール<br />
-          データベースは無料のスプレッドシートを使用しました<br />
-          ログインすると支出入力時に名前が自動的に入ります<br />
-          支出入力は &quot;Test&quot; シートで動作確認できます
+        <p className="md:pl-4">
+          支出管理ツール<br />
+          データベースは無料のスプレッドシート<br />
+          ログインすると支出入力時に入力者の名前が自動的に入る<br />
+          支出入力は &quot;Test&quot; シートで動作確認できる
         </p>
         <Border />
         <h2>Assets</h2>
-        <p>
+        <p className="md:pl-4">
           - Front<br />
           <span className="p-2" />- Next.js (React.js)<br />
           <span className="p-4" />- App Router (ver.14)<br />
           <span className="p-2" />- Tailwind CSS<br />
           <br />
           - Back<br />
-          <span className="p-2" />- Database: Google Spreadsheet<br />
+          <span className="p-2" />- Google Spreadsheet<br />
           <span className="p-2" />- Versel<br />
           <br />
           - Code<br />
-          <a href="https://github.com/yuya-wada-san/nextjs-saving" className="p-2">- <span className="underline">GitHub</span></a>
+          <a 
+            href={githubUrl}
+            className="p-2"
+          >
+            - <span className="underline">GitHub</span>
+          </a>
         </p>
         <Border />
         <h2>Contact</h2>
-        <div className="max-w-[200px] grid gap-1">
+        <div className="max-w-[200px] grid gap-1 md:pl-4">
           <p className="grid grid-cols-2">
             <span>Name:</span>
             <span>Yuya Wada</span>

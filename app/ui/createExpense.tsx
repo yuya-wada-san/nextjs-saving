@@ -10,7 +10,21 @@ export default function CreateExpense() {
   const [state, dispatch] = useFormState(postForm, initialState);
 
 	const { data: session, status } = useSession();
-  const person = session?.user?.name ? session?.user?.name : 'guest';
+  const person = session?.user?.name
+              ? session?.user?.name 
+              : 'guest';
+
+  const sheetList: string[] = ['Test','Feb24'];  
+  const categoryList: string[] = [
+          '食費&日用品',
+          '外食費',
+          '趣味',
+          'ホーム用品',
+          '書籍代',
+          'プレゼント代',
+          '家賃&水道光熱費',
+          'その他'
+        ];
 
   return (    
     <form action={dispatch}>
@@ -31,12 +45,14 @@ export default function CreateExpense() {
               <option value="" disabled>
                 シートを選択
               </option>
-              <option key="RawData_Test" value="Test">
-                Test
-              </option>
-              <option key="RawData_Feb24" value="Feb24">
-                Feb24
-              </option>
+              {sheetList.map((value) => {
+                const sheetName = `RawData_${value}`;
+                return(
+                  <option key={sheetName} value={value}>
+                    {value}
+                  </option>
+                )
+              })}
             </select>
           </div>
           <div id="sheet-error" aria-live="polite" aria-atomic="true">
@@ -64,27 +80,13 @@ export default function CreateExpense() {
               <option value="" disabled>
                 支出カテゴリ
               </option>
-              <option key="食費&日用品" value="食費&日用品">
-                食費&日用品
-              </option>
-              <option key="外食費" value="外食費">
-                外食費
-              </option>
-              <option key="趣味" value="趣味">
-                趣味
-              </option>
-              <option key="ホーム用品" value="ホーム用品">
-                ホーム用品
-              </option>
-              <option key="プレゼント代" value="プレゼント代">
-                プレゼント代
-              </option>
-              <option key="家賃&水道光熱費" value="家賃&水道光熱費">
-                家賃&水道光熱費
-              </option>
-              <option key="その他" value="その他">
-                その他
-              </option>
+              {categoryList.map((value, index) => {
+                return(
+                  <option key={index} value={value}>
+                    {value}
+                  </option>
+                  )
+              })}
             </select>
           </div>
           <div id="category-error" aria-live="polite" aria-atomic="true">
@@ -108,8 +110,8 @@ export default function CreateExpense() {
                 id="amount"
                 name="amount"
                 type="number"
-                step="0.01"
-                placeholder="金額を入力 [AUD]"
+                step="1"
+                placeholder="金額を入力"
                 className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
                 required
               />              

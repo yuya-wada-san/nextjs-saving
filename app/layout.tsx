@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: '%s | Yuya',
     default: 'Expense Mng Tool | Yuya',
   },
-  description: 'Expense Mnagement Tool by next app',
+  description: 'Expense Mnagement Tool by nextjs app',
 }
 
 export default function RootLayout({
