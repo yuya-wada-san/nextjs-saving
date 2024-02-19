@@ -23,7 +23,7 @@ export default async function RecentData({
               >
               <p>{value[0]}</p>
               <p className="text-center">{value[1]} </p>
-              <p className="text-right">{value[2]}</p>
+              <p className="text-right">{Number(value[2]).toLocaleString('ja-JP', {style:'currency', currency: 'JPY'})}</p>
             </div>
           )
         })}

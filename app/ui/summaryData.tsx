@@ -27,7 +27,7 @@ export default async function SummaryData({
               key={index}
             >
               <p>{value[0]}</p>
-              <p className="text-right">{value[1]}</p>
+              <p className="text-right">{Number(value[1]).toLocaleString('ja-JP', {style:'currency', currency: 'JPY'})} </p>
             </div>
           );
         })}

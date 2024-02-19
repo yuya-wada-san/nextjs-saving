@@ -111,7 +111,7 @@ export default function CreateExpense() {
                 name="amount"
                 type="number"
                 step="1"
-                placeholder="金額を入力"
+                placeholder="金額を入力 Ex) ¥1,000"
                 className="peer block w-full bg-slate-950 rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
                 required
               />              
