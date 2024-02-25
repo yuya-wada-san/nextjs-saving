@@ -10,7 +10,7 @@ export default function CreateExpense() {
   const [state, dispatch] = useFormState(postForm, initialState);
 
 	const { data: session, status } = useSession();
-  const person = session?.user?.name
+  const person = status === 'authenticated'
               ? session?.user?.name 
               : 'guest';
 
@@ -20,6 +20,7 @@ export default function CreateExpense() {
           '外食費',
           '趣味',
           'ホーム用品',
+          '交通費',
           '書籍代',
           'プレゼント代',
           '家賃&水道光熱費',
