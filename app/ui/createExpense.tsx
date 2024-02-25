@@ -10,7 +10,7 @@ export default function CreateExpense() {
   const [state, dispatch] = useFormState(postForm, initialState);
 
 	const { data: session, status } = useSession();
-  const person = status === 'authenticated'
+  const person = session?.user?.name
               ? session?.user?.name 
               : 'guest';
 
@@ -41,7 +41,6 @@ export default function CreateExpense() {
               id="sheet"
               name="sheet"
               className="peer block w-full bg-slate-700 cursor-pointer rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
-              defaultValue=""
             >
               <option value="" disabled>
                 シートを選択
@@ -76,7 +75,6 @@ export default function CreateExpense() {
               id="category"
               name="category"
               className="peer block w-full bg-slate-700 cursor-pointer rounded-md border border-slate-400 py-2 pl-5 text-sm outline-2"
-              defaultValue=""
             >
               <option value="" disabled>
                 支出カテゴリ
