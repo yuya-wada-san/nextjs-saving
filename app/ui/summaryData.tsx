@@ -7,7 +7,7 @@ export default async function SummaryData({
 }: {
   sheet: string,
 }) {
-  const sheetName = `Summary_${sheet}!A2:B12`;
+  const sheetName = `Summary_${sheet}!A2:B11`;
   const summaryData = await getGoogleSheetsData(sheetName);
   return (
     <div className="mt-10">

@@ -7,7 +7,7 @@ export default async function RecentData({
 }: {
   sheet: string,
 }) {
-  const sheetName = `Summary_${sheet}!A10:C10`;
+  const sheetName = `Summary_${sheet}!A12:C12`;
   const recentData = await getGoogleSheetsData(sheetName);
   return (
     <div>
